@@ -1,5 +1,5 @@
 # shape2csv
-convert things to other things if you want to
+Converts all shapefiles within a directory to csv format, saved within the same directory. 
 
 
-function for converting shapefiles within a directory to csv. Option to save full attribute table as csv, or only a list of desired columns.
+ Option to save full attribute table as csv, or only a list of desired columns.
