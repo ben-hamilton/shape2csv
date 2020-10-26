@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[8]:
-
 
 #Import the packages that will be used
 import geopandas as gpd
@@ -11,8 +6,6 @@ import os
 
 
 # In[9]:
-
-
 def shapes2csv(directory, full, columns):
 
     file_paths = []
@@ -22,10 +15,8 @@ def shapes2csv(directory, full, columns):
             filepath = subdir + os.sep + filename
 
             if filepath.endswith(".shp"):
-                filename = os.path.splitext(filepath)[0]#this takes the extension off of the file name. This sets us up to 
-                                                        #save the file with an altered name and different extension more easily. 
+                filename = os.path.splitext(filepath)[0]#this takes the extension off of the file name. This sets us up to save the file with an altered name and different extension more easily. 
                 file_paths.append(filename)
-    
     
     for p in range(len(file_paths)):
         path = file_paths[p]
@@ -48,23 +39,6 @@ def shapes2csv(directory, full, columns):
                 pass
         else:
             pass
-
-
-# In[10]:
-
-
-directory = r'C:\Users\ben\Documents\PuebloViejo\SqueeSAR_Data'
-columns =  ['CODE', 'VEL', 'V_STDEV', 'ACC', 'A_STDEV', 'VEL_V', 'V_STEDEV_V']
-
-
-# In[ ]:
-
-
-shapes2csv(directory = directory, full = True, columns = columns)
-
-
-# In[ ]:
-
 
 
 
