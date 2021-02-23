@@ -29,7 +29,7 @@ def shapes2csv(directory, full, columns):
         
             if columns != None:
                 cols = [col for col in df.columns if col in columns]
-                df = df[df.columns[df.columns.isin(cols)]]
+                df = df[df.columns[df.columns.isin(cols)]]#makes sure our dataframe contains just the specified columns
     #if you don't know the names of all the fields, you can also use numbers. This can also save you some time typing out a long list. 
     #for example:
     #df = df[df.columns[0:7]]
