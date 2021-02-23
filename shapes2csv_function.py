@@ -21,8 +21,8 @@ def shapes2csv(directory, full, columns):
     for p in range(len(file_paths)):
         path = file_paths[p]
         print(path)
-        gdf = gpd.read_file(f'{path}.shp')#imports shapefile as a geodatabase
-        df = pd.DataFrame(gdf)#converts shapefile to a regular boring old database
+        gdf = gpd.read_file(f'{path}.shp')#imports shapefile as a geodataframe
+        df = pd.DataFrame(gdf)#converts shapefile to a regular boring old dataframe
         fname = f'{file_paths[p]}_full.csv'#makes a new file name with extension
         if full == True:
             df.to_csv(fname)#save full csv
